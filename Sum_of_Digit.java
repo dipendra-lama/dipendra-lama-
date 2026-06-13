@@ -8,11 +8,11 @@ class Sum_of_Digit{
         Scanner ref = new Scanner(System.in);
         n = ref.nextInt();
         while(n>0){
-            r= n%10;
+            r= n % 10;
             Sum= Sum +r;
             n = n/10;
         }
-        System.out.print("Sum of Digits" + Sum);
+        System.out.print("Sum of Digits:" + Sum);
 
     }
 }
