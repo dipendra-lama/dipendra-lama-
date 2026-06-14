@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+class LCMOfTwoNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter first number: ");
+        int n1 = scanner.nextInt();
+        
+        System.out.print("Enter second number: ");
+        int n2 = scanner.nextInt();
+        
+        int gcd = findGCD(n1, n2);
+        
+        // LCM Formula 
+        int lcm = (n1 * n2) / gcd;
+        
+        System.out.println("LCM of " + n1 + " and " + n2 + " is: " + lcm);
+        
+        scanner.close();
+    }
+    
+    
+    public static int findGCD(int a, int b) {
+        while (b != 0) {
+            int remainder = a % b;
+            a = b;
+            b = remainder;
+        }
+        return a;
+    }
+}
